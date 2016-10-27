@@ -1,0 +1,105 @@
+<!--
+You may use this in any way, on any site, all we ask is that you please keep the link(s) crediting the author.   Though this is not mandatory, it is certainly appreciated.
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Bar Chart Serious Game</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/SeriousGames/style/bluebliss.css" />
+    <link rel="stylesheet" type="text/css" href="/SeriousGames/style/style.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    
+<div id="mainContentArea">
+	<div id="contentBox">
+        <div id="title">Bar Chart Serious Game</div>
+        
+        <div id="linkGroup">
+            <div class="link"><a href="/SeriousGames/index.html">Home</a></div>
+           <div class="link"><a href="/SeriousGames/html/game.html">Game</a></div> 
+            <div class="link"><a href="/SeriousGames/html/contact.html">Contact</a></div> 
+           
+        </div>
+        
+        
+        <div id="blueBox"> 
+          <div id="header"></div>
+          <div class="contentTitle">Bar Chart Serious Game - Activities Prototypes</div>
+            <div class="pageContent">
+                <div id="linkGroup">
+                    <div class="link"><a href="/SeriousGames/html/activity1.html">Activity 1</a></div>
+                    <div class="link"><a href="/SeriousGames/html/activity2.html">Activity 2</a></div>
+                    <div class="link" id="clicked"><a href="/SeriousGames/html/activity3.html">Activity 3</a></div>            
+                
+                    <div class="link"><a href="/SeriousGames/html/activity4.html">Activity 4</a></div>            
+                </div>              
+
+                <div class="muddatable">
+                <div class="muddarow">
+                    <div class="muddacell" id="col-1">
+                        <p>Select the label of the flavor(s) that represent the biggest sold amount between <b>"Strawberry"</b> and <b>"Cookies&Cream"</b>.</p>
+                        <img src="/SeriousGames/images/graph2.png"> 
+                        <ol id="selectable">
+                          <li class="ui-widget-content" value=1>Strawberry</li>
+                          <li class="ui-widget-content" value=0>Chocolate</li>
+                          <li class="ui-widget-content" value=0>Vanilla</li>
+                          <li class="ui-widget-content" value=0>Cookies&Cream</li>
+                          
+                        </ol>
+                    </div>
+
+                    <div class="muddacell" id="col-2">                      
+                        <button id="btCheck">Check my answer</button> <br>
+                        <p id="right" style="visibility:hidden;color:red">You got it! </p>
+                        <p id="wrong" style="visibility:hidden;color:red">You didn't get it yet, the tallest bar should represent the best sold flavor between Strawberry and Cookies&Cream!</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div id="footer"><a href="http://vialab.science.uoit.ca/portfolio/mariana-shimabukuro">Mariana Shimabukuro 2015</a> </div>
+        </div>
+	</div>
+</div>
+    
+
+</body>
+    <style>
+      #feedback { font-size: 1.4em; }
+      #selectable .ui-selecting { background: #FECA40; }
+      #selectable .ui-selected { background: #F39814; color: white; }
+      #selectable { list-style-type: none; margin: 0; padding: 0 5px; width: 450px; }
+      #selectable li { margin: 3px; padding: 1px; float: left; width: 100px; height: 30px; font-size: 12px; text-align: center; background: #E7EDF8; }
+  </style>
+  <script>
+  $(function() {
+    $( "#selectable" ).selectable();
+  });
+  </script>
+    <script>
+          
+         
+         $("#btCheck").click(function(){
+            v = $('#selectable .ui-selected');
+            if (v.length==1){
+                if (v[0].value==1){
+                    $("#right").css("visibility","visible");
+                    $("#wrong").css("visibility","hidden");
+                }else {
+                    $("#wrong").css("visibility","visible");
+                    $("#right").css("visibility","hidden");                       }
+            }else {
+                $("#wrong").css("visibility","visible");
+                $("#right").css("visibility","hidden");
+                
+            }
+            
+         });
+    </script>
+    
+     </html>

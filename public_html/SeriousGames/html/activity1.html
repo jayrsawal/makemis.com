@@ -1,0 +1,93 @@
+<!--
+You may use this in any way, on any site, all we ask is that you please keep the link(s) crediting the author.   Though this is not mandatory, it is certainly appreciated.
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Bar Chart Serious Game</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/SeriousGames/style/bluebliss.css" />
+    <link rel="stylesheet" type="text/css" href="/SeriousGames/style/style.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    
+<div id="mainContentArea">
+	<div id="contentBox">
+        <div id="title">Bar Chart Serious Game</div>
+        
+        <div id="linkGroup">
+            <div class="link"><a href="/SeriousGames/index.html">Home</a></div>
+           <div class="link"><a href="/SeriousGames/html/game.html">Game</a></div> 
+            <div class="link"><a href="/SeriousGames/html/contact.html">Contact</a></div> 
+           
+        </div>
+        
+        
+        <div id="blueBox"> 
+          <div id="header"></div>
+          <div class="contentTitle">Bar Chart Serious Game - Activities Prototypes</div>
+            <div class="pageContent">
+                <div id="linkGroup">
+                    <div class="link" id="clicked"><a href="/SeriousGames/html/activity1.html">Activity 1</a></div>
+                    <div class="link"><a href="/SeriousGames/html/activity2.html">Activity 2</a></div>
+                    <div class="link"><a href="/SeriousGames/html/activity3.html">Activity 3</a></div>            
+                
+                    <div class="link"><a href="/SeriousGames/html/activity4.html">Activity 4</a></div>            
+                </div></div>
+
+                <div class="muddatable">
+                <div class="muddarow">
+                    <div class="muddacell" id="col-1">
+                        <p>In the axis X, drag the labels in roder to organize them, refer to the raw data table in the right.</p>
+                        <img src="/SeriousGames/images/graph1.png"> 
+                        <ul id="sortable">
+                          <li class="ui-state-default" value=1 >Chocolate</li>
+                          <li class="ui-state-default" value=2>Vanilla</li>
+                          <li class="ui-state-default" value=0>Strawberry</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="muddacell" id="col-2">
+                        <img src="/SeriousGames/images/table1.png"><br><br>
+                        <button id="btCheck">Check my answer</button> <br>
+                        <p id="right" style="visibility:hidden;color:red">You got it! </p>
+                        <p id="wrong" style="visibility:hidden;color:red">You didn't get it yet, observe the table above and try again!</p>
+                    </div>
+                </div>
+                </div>
+        <div id="footer"><a href="http://vialab.science.uoit.ca/portfolio/mariana-shimabukuro">Mariana Shimabukuro 2015</a> </div>
+        </div>    
+        </div>
+            
+	</div>
+</div>
+    
+
+</body>
+    <script>
+          $(function() {
+            $( "#sortable" ).sortable();
+            $( "#sortable" ).disableSelection();
+          });
+         
+         $("#btCheck").click(function(){
+            ans = $("#sortable li");
+            
+           if (ans[0].value<ans[1].value && ans[1].value<ans[2].value){
+                $("#right").css("visibility","visible");
+                $("#wrong").css("visibility","hidden");
+           }else{
+                $("#wrong").css("visibility","visible");
+                $("#right").css("visibility","hidden");
+           }               
+            
+         });
+    </script>
+    
+     </html>

@@ -1,0 +1,225 @@
+html
+{
+  
+  height: 99%;
+  overflow: auto;
+}
+
+#video{
+    text-align: center;
+}
+                         
+body
+{
+  background: $ffffff;
+  height: 99%;
+  margin: 0;
+  padding: 0;
+  line-height: 150%;
+  text-align: center;
+}
+
+*
+{
+  font-size: 8pt; 
+  font-family: Tahoma, Verdana, sans-serif; 
+  color: #000000;
+  text-align: left;
+}
+
+
+
+/* === Containers === */
+
+
+ p
+{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:14px;
+}
+
+
+#mainContentArea
+{
+  
+  margin: 0 auto 0 auto; 
+  display: table; 
+  height: 100%;  
+  position: relative; 
+  overflow: auto; 
+  width: 900px;
+}
+
+
+.link,.linkActive
+{
+width:75px;
+margin-right:10px;
+float: left;
+margin-top:24px;
+text-align:center;
+font-family:Georgia, "Times New Roman", Times, serif;
+background-image:url(/SeriousGames/images/tab.gif);
+position:relative; bottom:0px;
+}
+
+#clicked,.link:hover
+{
+background-image:url(/SeriousGames/images/tab2.gif);
+}
+
+a
+{
+text-decoration:none;
+}
+
+.link a{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+}
+
+#linkGroup
+{
+height:40px;
+width:100%;
+}
+
+#title
+{
+width:60%;
+height:40px;
+/*margin-right:20px;*/
+margin-top:15px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:20px;
+font-weight:bold;
+text-align:center;
+float:left;
+}
+
+.contentTitle
+{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#213E74;
+font-size:19px;
+margin-left:15px;
+margin-right:12px;
+margin-bottom:12px;
+width:100%;
+}
+
+.contentSubTitle
+{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:black;
+font-style: bold;
+font-size:19px;
+margin-left:15px;
+margin-right:12px;
+margin-bottom:12px;
+width:873px;
+}
+
+.pageContent
+{
+font-family: Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:20px;
+/*
+margin-left:20px;
+margin-right:20px;
+*/
+width: 100%;
+}
+
+
+#blueBox
+{
+	position: absolute;
+	vertical-align: middle;
+	background-color:#E7EDF8;
+	width: 90%;
+	clear:both;
+    border-radius: 10px;
+    padding: 20px;
+   
+}
+
+/*
+#header
+{
+width:900px;
+height:20px;
+background-color:#FFFFFF;
+background-image:url(/images/header.gif);
+background-repeat:no-repeat;
+}
+*/
+
+
+#footer
+{
+width:100%;
+background-color:#E7EDF8;
+text-align:center;
+color:#BDCDEC;
+    margin-top: 20px;
+}
+
+#footer a
+{
+font-size:9px;
+color:#BDCDEC;
+}
+
+#contentBox
+{
+margin-top:25px;
+}
+
+.muddatable {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.muddarow {
+    display: table-row;
+    width: 100%;
+}
+
+.muddacell {
+    display: table-cell;
+}
+
+#col-1 {
+    width: 60%;
+}
+
+#col-2 {
+    width: 40%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#sortable {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 100 0; 
+    width: 600px; 
+}
+      #sortable li { 
+          margin: 3px 3px 3px 0; 
+          padding: 1px; 
+          float: left; 
+          width: 100px; 
+          height: 30px; 
+          font-size: 12px; 
+          text-align: center; 
+      }
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}
